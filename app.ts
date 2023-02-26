@@ -3,10 +3,13 @@ import net from "net";
 import { TCPPacket } from "./lib/TCPPacket";
 const PORT = process.env.PORT || 3008;
 
+// Adjustable variables
 const MAX_HTTP_REQUEST_PER_SECOND: number = 3000;
 const MAX_TCP_CONNECTION_PER_SECOND: number = 3000;
 const IS_PRIME_TIME: boolean = false;
 const STATISTIC_ACCEPTABLE_LOAD_PERCENTAGE: number = 80;
+//
+
 const IP_HTTP_REQUESTS_COUNT: Map<string, any> = new Map();
 const IP_CONNECTION_COUNT: Map<string, any> = new Map();
 const IP_BLOCK_LIST: Map<string, any> = new Map();
